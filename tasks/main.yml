@@ -1,0 +1,23 @@
+---
+ - name: install msmtp
+   become: yes
+   apt: 
+    name: "ca-certificates,msmtp"
+    state: "present"
+
+ - name: configure msmtp
+   become: yes
+   template: 
+    src: "msmtprc.j2"
+    dest: "/etc/msmtprc"
+    group: "root"
+    owner: "root"
+    mode: "0600"
+
+ - name: configure aliases
+   become: yes
+   template: 
+    src: "aliases.j2"
+    dest: "{{msmtp_aliases}}"
+
+ -

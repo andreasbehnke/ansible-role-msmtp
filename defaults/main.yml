@@ -1,0 +1,2 @@
+---
+  msmtp_tls_trust_file: "/etc/ssl/certs/ca-certificates.crt"
