@@ -20,8 +20,8 @@
     src: "aliases.j2"
     dest: "{{msmtp_aliases}}"
 
- - name: create symlink for sendmail
-   become: yes
-   file:
-    src: "/usr/bin/msmtp" 
-    dest: "/usr/sbin/sendmail"
+# - name: create symlink for sendmail
+#   become: yes
+#   file:
+#    src: "/usr/bin/msmtp" 
+#    dest: "/usr/sbin/sendmail"
