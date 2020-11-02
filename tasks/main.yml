@@ -1,4 +1,10 @@
 ---
+ - name: remove postfix
+   become: yes
+   apt:
+    name: "postfix"
+    state: "absent"
+ 
  - name: install msmtp
    become: yes
    apt: 
